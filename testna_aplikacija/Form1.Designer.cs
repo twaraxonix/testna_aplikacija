@@ -29,73 +29,82 @@ namespace testna_aplikacija
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.buttonPrijava = new System.Windows.Forms.Button();
+            this.buttonRegistracija = new System.Windows.Forms.Button();
+            this.buttonPozabljenoGeslo = new System.Windows.Forms.Button();
+            this.textBoxIme = new System.Windows.Forms.TextBox();
+            this.textBoxPriimek = new System.Windows.Forms.TextBox();
+            this.textBoxENaslov = new System.Windows.Forms.TextBox();
+            this.textBoxGeslo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonPrijava
             // 
-            this.button1.Location = new System.Drawing.Point(199, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPrijava.Location = new System.Drawing.Point(175, 260);
+            this.buttonPrijava.Name = "buttonPrijava";
+            this.buttonPrijava.Size = new System.Drawing.Size(139, 35);
+            this.buttonPrijava.TabIndex = 0;
+            this.buttonPrijava.Text = "Prijava";
+            this.buttonPrijava.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonRegistracija
             // 
-            this.button2.Location = new System.Drawing.Point(199, 249);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonRegistracija.Location = new System.Drawing.Point(175, 301);
+            this.buttonRegistracija.Name = "buttonRegistracija";
+            this.buttonRegistracija.Size = new System.Drawing.Size(139, 36);
+            this.buttonRegistracija.TabIndex = 1;
+            this.buttonRegistracija.Text = "Registracija";
+            this.buttonRegistracija.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonPozabljenoGeslo
             // 
-            this.button3.Location = new System.Drawing.Point(199, 305);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonPozabljenoGeslo.Location = new System.Drawing.Point(175, 343);
+            this.buttonPozabljenoGeslo.Name = "buttonPozabljenoGeslo";
+            this.buttonPozabljenoGeslo.Size = new System.Drawing.Size(139, 33);
+            this.buttonPozabljenoGeslo.TabIndex = 2;
+            this.buttonPozabljenoGeslo.Text = "Pozabljneo geslo";
+            this.buttonPozabljenoGeslo.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxIme
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 26);
-            this.textBox1.TabIndex = 3;
+            this.textBoxIme.Location = new System.Drawing.Point(175, 31);
+            this.textBoxIme.Name = "textBoxIme";
+            this.textBoxIme.Size = new System.Drawing.Size(163, 26);
+            this.textBoxIme.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxPriimek
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 26);
-            this.textBox2.TabIndex = 4;
+            this.textBoxPriimek.Location = new System.Drawing.Point(175, 75);
+            this.textBoxPriimek.Name = "textBoxPriimek";
+            this.textBoxPriimek.Size = new System.Drawing.Size(163, 26);
+            this.textBoxPriimek.TabIndex = 4;
             // 
-            // textBox3
+            // textBoxENaslov
             // 
-            this.textBox3.Location = new System.Drawing.Point(175, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 26);
-            this.textBox3.TabIndex = 5;
+            this.textBoxENaslov.Location = new System.Drawing.Point(175, 124);
+            this.textBoxENaslov.Name = "textBoxENaslov";
+            this.textBoxENaslov.Size = new System.Drawing.Size(163, 26);
+            this.textBoxENaslov.TabIndex = 5;
+            // 
+            // textBoxGeslo
+            // 
+            this.textBoxGeslo.Location = new System.Drawing.Point(175, 174);
+            this.textBoxGeslo.Name = "textBoxGeslo";
+            this.textBoxGeslo.Size = new System.Drawing.Size(163, 26);
+            this.textBoxGeslo.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxGeslo);
+            this.Controls.Add(this.textBoxENaslov);
+            this.Controls.Add(this.textBoxPriimek);
+            this.Controls.Add(this.textBoxIme);
+            this.Controls.Add(this.buttonPozabljenoGeslo);
+            this.Controls.Add(this.buttonRegistracija);
+            this.Controls.Add(this.buttonPrijava);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -105,12 +114,13 @@ namespace testna_aplikacija
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button buttonPrijava;
+        private System.Windows.Forms.Button buttonRegistracija;
+        private System.Windows.Forms.Button buttonPozabljenoGeslo;
+        private System.Windows.Forms.TextBox textBoxIme;
+        private System.Windows.Forms.TextBox textBoxPriimek;
+        private System.Windows.Forms.TextBox textBoxENaslov;
+        private System.Windows.Forms.TextBox textBoxGeslo;
     }
 }
 
