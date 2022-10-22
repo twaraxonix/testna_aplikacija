@@ -40,6 +40,7 @@ namespace testna_aplikacija
             this.labelPriimek = new System.Windows.Forms.Label();
             this.labelENaslov = new System.Windows.Forms.Label();
             this.labelGeslo = new System.Windows.Forms.Label();
+            this.LabelPrijava = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonPrijava
@@ -50,6 +51,7 @@ namespace testna_aplikacija
             this.buttonPrijava.TabIndex = 0;
             this.buttonPrijava.Text = "Prijava";
             this.buttonPrijava.UseVisualStyleBackColor = true;
+            this.buttonPrijava.Click += new System.EventHandler(this.buttonPrijava_Click);
             // 
             // buttonRegistracija
             // 
@@ -134,11 +136,22 @@ namespace testna_aplikacija
             this.labelGeslo.TabIndex = 10;
             this.labelGeslo.Text = "Geslo";
             // 
+            // LabelPrijava
+            // 
+            this.LabelPrijava.AutoSize = true;
+            this.LabelPrijava.Location = new System.Drawing.Point(508, 108);
+            this.LabelPrijava.Name = "LabelPrijava";
+            this.LabelPrijava.Size = new System.Drawing.Size(94, 20);
+            this.LabelPrijava.TabIndex = 11;
+            this.LabelPrijava.Text = "LabelPrijava";
+            this.LabelPrijava.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LabelPrijava);
             this.Controls.Add(this.labelGeslo);
             this.Controls.Add(this.labelENaslov);
             this.Controls.Add(this.labelPriimek);
@@ -170,6 +183,7 @@ namespace testna_aplikacija
         private System.Windows.Forms.Label labelPriimek;
         private System.Windows.Forms.Label labelENaslov;
         private System.Windows.Forms.Label labelGeslo;
+        private System.Windows.Forms.Label LabelPrijava;
     }
 }
 
