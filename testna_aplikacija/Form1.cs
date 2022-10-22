@@ -30,12 +30,24 @@ namespace testna_aplikacija
                 eNaslov = textBoxENaslov.Text;
                 geslo = textBoxGeslo.Text;
                 LabelPrijava.Visible = true;
+                buttonOdjava.Visible = true;
                 LabelPrijava.Text = "Pozdravljeni " + ime + " " + priimek + "!";
+                groupBoxVnosnaPolja.Visible = false;
             }
             else
             {
                 MessageBox.Show("Nobeno polje ne sme biti prazno!!!");
             }
+        }
+
+        private void buttonOdjava_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Odjavili ste se!");
+            groupBoxVnosnaPolja.Visible = true;
+            textBoxIme.Text = "";
+            textBoxPriimek.Text = "";
+            textBoxENaslov.Text = "";
+            textBoxGeslo.Text = "";
         }
     }
 }
