@@ -10,7 +10,7 @@ namespace testna_aplikacija
     {
         string ime, priimek, eNaslov, geslo;
 
-        PrijavniPodatki(string Ime, string Priimek, string ENaslov, string Geslo) {
+        public PrijavniPodatki(string Ime, string Priimek, string ENaslov, string Geslo) {
             ime = Ime;
             priimek = Priimek;
             eNaslov = ENaslov;

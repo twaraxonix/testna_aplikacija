@@ -17,6 +17,8 @@ namespace testna_aplikacija
         string eNaslov = "";
         string geslo = "";
         string ponoviGeslo = "";
+        List<PrijavniPodatki> podatki = new List<PrijavniPodatki>();
+        
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace testna_aplikacija
             textBoxPonoviGeslo.Visible = false;
             buttonNazaj.Visible = false;
             buttonRegistrirajSe.Visible = false;
+            podatki.Add(new PrijavniPodatki("test", "test", "test", "testtest"));
         }
 
         private void buttonPrijava_Click(object sender, EventArgs e)
