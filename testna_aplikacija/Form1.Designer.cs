@@ -43,6 +43,10 @@ namespace testna_aplikacija
             this.LabelPrijava = new System.Windows.Forms.Label();
             this.groupBoxVnosnaPolja = new System.Windows.Forms.GroupBox();
             this.buttonOdjava = new System.Windows.Forms.Button();
+            this.labelPonoviGeslo = new System.Windows.Forms.Label();
+            this.textBoxPonoviGeslo = new System.Windows.Forms.TextBox();
+            this.buttonRegistrirajSe = new System.Windows.Forms.Button();
+            this.buttonNazaj = new System.Windows.Forms.Button();
             this.groupBoxVnosnaPolja.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +68,7 @@ namespace testna_aplikacija
             this.buttonRegistracija.TabIndex = 1;
             this.buttonRegistracija.Text = "Registracija";
             this.buttonRegistracija.UseVisualStyleBackColor = true;
+            this.buttonRegistracija.Click += new System.EventHandler(this.buttonRegistracija_Click);
             // 
             // buttonPozabljenoGeslo
             // 
@@ -151,6 +156,10 @@ namespace testna_aplikacija
             // 
             // groupBoxVnosnaPolja
             // 
+            this.groupBoxVnosnaPolja.Controls.Add(this.buttonNazaj);
+            this.groupBoxVnosnaPolja.Controls.Add(this.buttonRegistrirajSe);
+            this.groupBoxVnosnaPolja.Controls.Add(this.labelPonoviGeslo);
+            this.groupBoxVnosnaPolja.Controls.Add(this.textBoxPonoviGeslo);
             this.groupBoxVnosnaPolja.Controls.Add(this.textBoxPriimek);
             this.groupBoxVnosnaPolja.Controls.Add(this.buttonPrijava);
             this.groupBoxVnosnaPolja.Controls.Add(this.labelGeslo);
@@ -167,7 +176,6 @@ namespace testna_aplikacija
             this.groupBoxVnosnaPolja.Size = new System.Drawing.Size(467, 404);
             this.groupBoxVnosnaPolja.TabIndex = 12;
             this.groupBoxVnosnaPolja.TabStop = false;
-            this.groupBoxVnosnaPolja.Text = "groupBox1";
             // 
             // buttonOdjava
             // 
@@ -179,6 +187,43 @@ namespace testna_aplikacija
             this.buttonOdjava.UseVisualStyleBackColor = true;
             this.buttonOdjava.Visible = false;
             this.buttonOdjava.Click += new System.EventHandler(this.buttonOdjava_Click);
+            // 
+            // labelPonoviGeslo
+            // 
+            this.labelPonoviGeslo.AutoSize = true;
+            this.labelPonoviGeslo.Location = new System.Drawing.Point(11, 216);
+            this.labelPonoviGeslo.Name = "labelPonoviGeslo";
+            this.labelPonoviGeslo.Size = new System.Drawing.Size(98, 20);
+            this.labelPonoviGeslo.TabIndex = 12;
+            this.labelPonoviGeslo.Text = "PonoviGeslo";
+            // 
+            // textBoxPonoviGeslo
+            // 
+            this.textBoxPonoviGeslo.Location = new System.Drawing.Point(173, 211);
+            this.textBoxPonoviGeslo.Name = "textBoxPonoviGeslo";
+            this.textBoxPonoviGeslo.PasswordChar = '*';
+            this.textBoxPonoviGeslo.Size = new System.Drawing.Size(216, 26);
+            this.textBoxPonoviGeslo.TabIndex = 11;
+            // 
+            // buttonRegistrirajSe
+            // 
+            this.buttonRegistrirajSe.Location = new System.Drawing.Point(173, 297);
+            this.buttonRegistrirajSe.Name = "buttonRegistrirajSe";
+            this.buttonRegistrirajSe.Size = new System.Drawing.Size(139, 36);
+            this.buttonRegistrirajSe.TabIndex = 13;
+            this.buttonRegistrirajSe.Text = "Registriraj se";
+            this.buttonRegistrirajSe.UseVisualStyleBackColor = true;
+            this.buttonRegistrirajSe.Click += new System.EventHandler(this.buttonRegistrirajSe_Click);
+            // 
+            // buttonNazaj
+            // 
+            this.buttonNazaj.Location = new System.Drawing.Point(15, 336);
+            this.buttonNazaj.Name = "buttonNazaj";
+            this.buttonNazaj.Size = new System.Drawing.Size(108, 36);
+            this.buttonNazaj.TabIndex = 14;
+            this.buttonNazaj.Text = "Nazaj";
+            this.buttonNazaj.UseVisualStyleBackColor = true;
+            this.buttonNazaj.Click += new System.EventHandler(this.buttonNazaj_Click);
             // 
             // Form1
             // 
@@ -213,6 +258,10 @@ namespace testna_aplikacija
         private System.Windows.Forms.Label LabelPrijava;
         private System.Windows.Forms.GroupBox groupBoxVnosnaPolja;
         private System.Windows.Forms.Button buttonOdjava;
+        private System.Windows.Forms.Label labelPonoviGeslo;
+        private System.Windows.Forms.TextBox textBoxPonoviGeslo;
+        private System.Windows.Forms.Button buttonRegistrirajSe;
+        private System.Windows.Forms.Button buttonNazaj;
     }
 }
 

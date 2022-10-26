@@ -19,6 +19,13 @@ namespace testna_aplikacija
         public Form1()
         {
             InitializeComponent();
+            label1.Visible = false;
+            textBoxIme.Visible = false;
+            textBoxPriimek.Visible = false;
+            labelPriimek.Visible = false;
+            labelPonoviGeslo.Visible = false;
+            textBoxPonoviGeslo.Visible = false;
+
         }
 
         private void buttonPrijava_Click(object sender, EventArgs e)
@@ -48,6 +55,26 @@ namespace testna_aplikacija
             textBoxPriimek.Text = "";
             textBoxENaslov.Text = "";
             textBoxGeslo.Text = "";
+        }
+
+        private void buttonRegistracija_Click(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+            labelPriimek.Visible = true;
+            labelPonoviGeslo.Visible = true;
+            textBoxIme.Visible = true;
+            textBoxPriimek.Visible = true;
+            textBoxPonoviGeslo.Visible = true;
+        }
+
+        private void buttonRegistrirajSe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonNazaj_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
