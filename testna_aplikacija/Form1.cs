@@ -41,20 +41,19 @@ namespace testna_aplikacija
                 {
                     if (podatki[i].eNaslov == textBoxENaslov.Text && podatki[i].geslo == textBoxGeslo.Text)
                     {
-                        eNaslov = textBoxENaslov.Text;
-                        geslo = textBoxGeslo.Text;
                         LabelPrijava.Visible = true;
                         buttonOdjava.Visible = true;
                         LabelPrijava.Text = "Pozdravljeni " + podatki[i].ime + " " + podatki[i].priimek + "!";
                         groupBoxVnosnaPolja.Visible = false;
                     }
-                    else {
-                        MessageBox.Show("Nepravilno geslo ali email");
-                        textBoxENaslov.Clear();
-                        textBoxGeslo.Clear();
-                    }
                 }
-                
+                if (!LabelPrijava.Visible)
+                {
+                    MessageBox.Show("Nepravilno geslo ali email");
+                    textBoxENaslov.Clear();
+                    textBoxGeslo.Clear();
+                }
+
             }
             else
             {
@@ -72,15 +71,11 @@ namespace testna_aplikacija
             textBoxGeslo.Clear();
             buttonOdjava.Visible = false;
             LabelPrijava.Visible = false;
+            buttonRegistracija.Visible = true;
         }
 
         private void buttonRegistracija_Click(object sender, EventArgs e)
-        {
-            ime = textBoxIme.Text;
-            priimek = textBoxPriimek.Text;
-            eNaslov = textBoxENaslov.Text;
-            geslo = textBoxGeslo.Text;
-
+        { 
             label1.Visible = true;
             labelPriimek.Visible = true;
             labelPonoviGeslo.Visible = true;
@@ -95,15 +90,55 @@ namespace testna_aplikacija
 
         private void buttonRegistrirajSe_Click(object sender, EventArgs e)
         {
-            label1.Visible = false;
-            textBoxIme.Visible = false;
-            textBoxPriimek.Visible = false;
-            labelPriimek.Visible = false;
-            labelPonoviGeslo.Visible = false;
-            textBoxPonoviGeslo.Visible = false;
-            buttonNazaj.Visible = false;
-            buttonRegistrirajSe.Visible = false;
-            buttonPrijava.Visible = true;
+            ime = textBoxIme.Text;
+            priimek = textBoxPriimek.Text;
+            eNaslov = textBoxENaslov.Text;
+            geslo = textBoxGeslo.Text;
+            ponoviGeslo = textBoxPonoviGeslo.Text;
+
+            if (ime != "" && priimek != "" && eNaslov != "" && geslo.Length >= 8)
+            {
+                if (geslo == ponoviGeslo)
+                {
+                    podatki.Add(new PrijavniPodatki(ime, priimek, eNaslov, geslo));
+                    LabelPrijava.Visible = true;
+                    buttonOdjava.Visible = true;
+                    LabelPrijava.Text = "Pozdravljeni " + ime + " " + priimek + "!";
+                    groupBoxVnosnaPolja.Visible = false;
+                    
+                    label1.Visible = false;
+                    textBoxIme.Visible = false;
+                    textBoxPriimek.Visible = false;
+                    labelPriimek.Visible = false;
+                    labelPonoviGeslo.Visible = false;
+                    textBoxPonoviGeslo.Visible = false;
+                    buttonNazaj.Visible = false;
+                    buttonRegistrirajSe.Visible = false;
+                    buttonPrijava.Visible = true;
+                    textBoxIme.Clear();
+                    textBoxPriimek.Clear();
+                    textBoxENaslov.Clear();
+                    textBoxGeslo.Clear();
+                    textBoxPonoviGeslo.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Geslo se ne ujemata!!!");
+                    textBoxIme.Clear();
+                    textBoxPriimek.Clear();
+                    textBoxENaslov.Clear();
+                    textBoxGeslo.Clear();
+                    textBoxPonoviGeslo.Clear();
+                }
+            }
+            else {
+                MessageBox.Show("Nobeno polje ne sme biti prazno!");
+                textBoxIme.Clear();
+                textBoxPriimek.Clear();
+                textBoxENaslov.Clear();
+                textBoxGeslo.Clear();
+                textBoxPonoviGeslo.Clear();
+            }
         }
 
         private void buttonNazaj_Click(object sender, EventArgs e)
