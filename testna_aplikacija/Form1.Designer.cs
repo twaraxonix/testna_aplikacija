@@ -31,7 +31,6 @@ namespace testna_aplikacija
         {
             this.buttonPrijava = new System.Windows.Forms.Button();
             this.buttonRegistracija = new System.Windows.Forms.Button();
-            this.buttonPozabljenoGeslo = new System.Windows.Forms.Button();
             this.textBoxIme = new System.Windows.Forms.TextBox();
             this.textBoxPriimek = new System.Windows.Forms.TextBox();
             this.textBoxENaslov = new System.Windows.Forms.TextBox();
@@ -69,15 +68,6 @@ namespace testna_aplikacija
             this.buttonRegistracija.Text = "Registracija";
             this.buttonRegistracija.UseVisualStyleBackColor = true;
             this.buttonRegistracija.Click += new System.EventHandler(this.buttonRegistracija_Click);
-            // 
-            // buttonPozabljenoGeslo
-            // 
-            this.buttonPozabljenoGeslo.Location = new System.Drawing.Point(173, 339);
-            this.buttonPozabljenoGeslo.Name = "buttonPozabljenoGeslo";
-            this.buttonPozabljenoGeslo.Size = new System.Drawing.Size(139, 33);
-            this.buttonPozabljenoGeslo.TabIndex = 2;
-            this.buttonPozabljenoGeslo.Text = "Pozabljeno geslo";
-            this.buttonPozabljenoGeslo.UseVisualStyleBackColor = true;
             // 
             // textBoxIme
             // 
@@ -165,7 +155,6 @@ namespace testna_aplikacija
             this.groupBoxVnosnaPolja.Controls.Add(this.labelGeslo);
             this.groupBoxVnosnaPolja.Controls.Add(this.buttonRegistracija);
             this.groupBoxVnosnaPolja.Controls.Add(this.labelENaslov);
-            this.groupBoxVnosnaPolja.Controls.Add(this.buttonPozabljenoGeslo);
             this.groupBoxVnosnaPolja.Controls.Add(this.labelPriimek);
             this.groupBoxVnosnaPolja.Controls.Add(this.textBoxIme);
             this.groupBoxVnosnaPolja.Controls.Add(this.label1);
@@ -246,7 +235,6 @@ namespace testna_aplikacija
 
         private System.Windows.Forms.Button buttonPrijava;
         private System.Windows.Forms.Button buttonRegistracija;
-        private System.Windows.Forms.Button buttonPozabljenoGeslo;
         private System.Windows.Forms.TextBox textBoxIme;
         private System.Windows.Forms.TextBox textBoxPriimek;
         private System.Windows.Forms.TextBox textBoxENaslov;

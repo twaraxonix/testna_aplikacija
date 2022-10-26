@@ -16,6 +16,7 @@ namespace testna_aplikacija
         string priimek = "";
         string eNaslov = "";
         string geslo = "";
+        string ponoviGeslo = "";
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +26,8 @@ namespace testna_aplikacija
             labelPriimek.Visible = false;
             labelPonoviGeslo.Visible = false;
             textBoxPonoviGeslo.Visible = false;
-
+            buttonNazaj.Visible = false;
+            buttonRegistrirajSe.Visible = false;
         }
 
         private void buttonPrijava_Click(object sender, EventArgs e)
@@ -65,16 +67,37 @@ namespace testna_aplikacija
             textBoxIme.Visible = true;
             textBoxPriimek.Visible = true;
             textBoxPonoviGeslo.Visible = true;
+            buttonRegistrirajSe.Visible = true;
+            buttonRegistracija.Visible = false;
+            buttonPrijava.Visible = false;
+            buttonNazaj.Visible = true;
         }
 
         private void buttonRegistrirajSe_Click(object sender, EventArgs e)
         {
-
+            label1.Visible = false;
+            textBoxIme.Visible = false;
+            textBoxPriimek.Visible = false;
+            labelPriimek.Visible = false;
+            labelPonoviGeslo.Visible = false;
+            textBoxPonoviGeslo.Visible = false;
+            buttonNazaj.Visible = false;
+            buttonRegistrirajSe.Visible = false;
+            buttonPrijava.Visible = true;
         }
 
         private void buttonNazaj_Click(object sender, EventArgs e)
         {
-
+            label1.Visible = false;
+            textBoxIme.Visible = false;
+            textBoxPriimek.Visible = false;
+            labelPriimek.Visible = false;
+            labelPonoviGeslo.Visible = false;
+            textBoxPonoviGeslo.Visible = false;
+            buttonNazaj.Visible = false;
+            buttonPrijava.Visible = true;
+            buttonRegistrirajSe.Visible = false;
+            buttonRegistracija.Visible = true;
         }
     }
 }
