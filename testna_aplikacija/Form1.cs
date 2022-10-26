@@ -66,10 +66,12 @@ namespace testna_aplikacija
         {
             MessageBox.Show("Odjavili ste se!");
             groupBoxVnosnaPolja.Visible = true;
-            textBoxIme.Text = "";
-            textBoxPriimek.Text = "";
-            textBoxENaslov.Text = "";
-            textBoxGeslo.Text = "";
+            textBoxIme.Clear();
+            textBoxPriimek.Clear();
+            textBoxENaslov.Clear();
+            textBoxGeslo.Clear();
+            buttonOdjava.Visible = false;
+            LabelPrijava.Visible = false;
         }
 
         private void buttonRegistracija_Click(object sender, EventArgs e)
