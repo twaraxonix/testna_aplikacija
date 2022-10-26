@@ -30,21 +30,31 @@ namespace testna_aplikacija
             textBoxPonoviGeslo.Visible = false;
             buttonNazaj.Visible = false;
             buttonRegistrirajSe.Visible = false;
-            podatki.Add(new PrijavniPodatki("test", "test", "test", "testtest"));
+            podatki.Add(new PrijavniPodatki("Admin", "hahahaha", "test", "testtest"));
         }
 
         private void buttonPrijava_Click(object sender, EventArgs e)
         {
-            if (textBoxIme.Text != "" && textBoxPriimek.Text != "" && textBoxENaslov.Text != "" && textBoxGeslo.Text.Length >= 8)
+            if (textBoxENaslov.Text != "" && textBoxGeslo.Text.Length >= 8)
             {
-                ime = textBoxIme.Text;
-                priimek = textBoxPriimek.Text;
-                eNaslov = textBoxENaslov.Text;
-                geslo = textBoxGeslo.Text;
-                LabelPrijava.Visible = true;
-                buttonOdjava.Visible = true;
-                LabelPrijava.Text = "Pozdravljeni " + ime + " " + priimek + "!";
-                groupBoxVnosnaPolja.Visible = false;
+                for (int i = 0; i < podatki.Count(); i++)
+                {
+                    if (podatki[i].eNaslov == textBoxENaslov.Text && podatki[i].geslo == textBoxGeslo.Text)
+                    {
+                        eNaslov = textBoxENaslov.Text;
+                        geslo = textBoxGeslo.Text;
+                        LabelPrijava.Visible = true;
+                        buttonOdjava.Visible = true;
+                        LabelPrijava.Text = "Pozdravljeni " + podatki[i].ime + " " + podatki[i].priimek + "!";
+                        groupBoxVnosnaPolja.Visible = false;
+                    }
+                    else {
+                        MessageBox.Show("Nepravilno geslo ali email");
+                        textBoxENaslov.Clear();
+                        textBoxGeslo.Clear();
+                    }
+                }
+                
             }
             else
             {
@@ -64,6 +74,11 @@ namespace testna_aplikacija
 
         private void buttonRegistracija_Click(object sender, EventArgs e)
         {
+            ime = textBoxIme.Text;
+            priimek = textBoxPriimek.Text;
+            eNaslov = textBoxENaslov.Text;
+            geslo = textBoxGeslo.Text;
+
             label1.Visible = true;
             labelPriimek.Visible = true;
             labelPonoviGeslo.Visible = true;

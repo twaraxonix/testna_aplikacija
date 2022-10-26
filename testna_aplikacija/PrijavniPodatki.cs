@@ -8,7 +8,7 @@ namespace testna_aplikacija
 {
     public class PrijavniPodatki
     {
-        string ime, priimek, eNaslov, geslo;
+        public string ime, priimek, eNaslov, geslo;
 
         public PrijavniPodatki(string Ime, string Priimek, string ENaslov, string Geslo) {
             ime = Ime;
